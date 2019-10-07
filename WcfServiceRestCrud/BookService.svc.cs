@@ -43,7 +43,7 @@ namespace SimpleRESTServiceCRUD
                         return "Unable to delete book with id = " + id;
         }
 
-		public Book GetBookByNameAndId(string id, string name)
+		public Book GetBookByNameAndId(string id, string name, int test)
 		{
 			return repository.GetBookByNameAndId(int.Parse(id), name);
 			//throw new NotImplementedException();

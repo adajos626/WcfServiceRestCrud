@@ -22,8 +22,8 @@ namespace SimpleRESTServiceCRUD
         Book GetBookById(string id);
 
 		[OperationContract]
-		[WebInvoke(Method = "GET", RequestFormat = WebMessageFormat.Json, ResponseFormat = WebMessageFormat.Json, UriTemplate = "Book/{name}/{id}")]
-		Book GetBookByNameAndId(string id, string name);
+		[WebInvoke(Method = "GET", RequestFormat = WebMessageFormat.Json, ResponseFormat = WebMessageFormat.Json, UriTemplate = "Book/{testextraparam}/{name}/{id}")]
+		Book GetBookByNameAndId(string id, string name, int testextraparam);
 
 		[OperationContract]
         [WebInvoke(Method = "PUT", RequestFormat = WebMessageFormat.Json, ResponseFormat = WebMessageFormat.Json, UriTemplate = "AddBook/{id}")]
