@@ -45,7 +45,8 @@ namespace SimpleRESTServiceCRUD
 
 		public Book GetBookByNameAndId(string id, string name)
 		{
-			throw new NotImplementedException();
+			return repository.GetBookByNameAndId(int.Parse(id), name);
+			//throw new NotImplementedException();
 		}
 	}
 }

@@ -28,7 +28,8 @@ namespace SimpleRESTServiceCRUD
            Book AddNewBook(Book item);
            bool DeleteABook(int id);
            bool UpdateABook(Book item);
-    }
+		Book GetBookByNameAndId(int v, string name);
+	}
 
     public class BookRepository : IBookRepository
     {
@@ -90,5 +91,11 @@ namespace SimpleRESTServiceCRUD
                  books.RemoveAll(b => b.BookId == bookId);
                  return true;
           }
-     }
+
+		public Book GetBookByNameAndId(int bookId, string name)
+		{
+			return books.Find(b => (b.BookId == bookId && b.Title == name));
+			//throw new NotImplementedException();
+		}
+	}
 }
